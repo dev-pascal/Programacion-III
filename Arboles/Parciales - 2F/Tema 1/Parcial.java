@@ -34,7 +34,7 @@ public class Parcial {
         resolver(arbol,minimo,lista);
         return lista;
     }
-    private static armarArbol (ArbolGeneral<Integer> dos) {
+    private static void armarArbol (ArbolGeneral<Integer> dos) {
         ArbolGeneral<Integer> veinticinco1= new ArbolGeneral<Integer>(25);
         veinticinco1.agregarHijo(new ArbolGeneral<Integer>(10));
         veinticinco1.agregarHijo(new ArbolGeneral<Integer>(6));
