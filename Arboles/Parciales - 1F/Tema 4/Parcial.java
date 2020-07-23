@@ -3,7 +3,7 @@ package prog3.arbol.general;
 import prog3.listagenerica.ListaGenerica;
 import prog3.listagenerica.ListaGenericaEnlazada;
 
-public class Parcial4 {
+public class Parcial {
 	private static boolean resolver (ArbolGeneral<Boolean> arbol, int nivelAct, boolean aux, ListaGenerica<Integer> niveles) {
 		if (!arbol.esHoja() && !arbol.getDatoRaiz() && !aux) {
 			aux=true;
