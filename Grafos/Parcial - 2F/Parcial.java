@@ -14,12 +14,8 @@ public class Parcial {
 		while (!fin.esVacia()) 
 			fin.eliminarEn(0);
 		act.comenzar();
-		Local dato = null;
 		while (!act.fin()) {
-			dato=act.proximo();
-			if (!fin.incluye(dato)) {
-				fin.agregarFinal(dato);
-			}
+			fin.agregarFinal(act.proximo());
 		}
 	}
 	private static boolean dfs (int i, boolean [] marca, ListaGenerica<Local> localesAct,
@@ -53,8 +49,7 @@ public class Parcial {
 		if (!exito)
 			localesAct.eliminarEn(localesAct.tamanio()-1);
 		else
-			if (exito)
-				procesar(localesAct, localesFinal);
+			procesar(localesAct, localesFinal);
 		marca[i]=false;
 		return exito;
 	}
@@ -78,6 +73,7 @@ public class Parcial {
 		ListaGenerica<Local> listaLocalesF = new ListaGenericaEnlazada<Local>();
 		int O = buscar(locales, origen);
 		if (O!=-1) {
+			System.out.println("Ingrese destino");
 			Scanner in = new Scanner(System.in);
 			String destino=in.next();
 			int D = buscar(locales, destino);
